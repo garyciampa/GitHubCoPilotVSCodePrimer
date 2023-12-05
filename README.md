@@ -25,6 +25,16 @@ To start using GitHub Copilot in Visual Studio Code, follow these steps:
 2. Sign in to your GitHub account within VS Code.
 3. Open a code file, and start coding! Copilot will provide suggestions as you type.
 
+### Using the GitHub Copilot "Chat" prompt dialog, here are a few suggestions for a starting point: 
+
+4. What azure service is recommended to create a REST endpoint for connecting to Cosmos Db
+5. What vs code extentions are required to create an azure function and run with local storage for testing
+6. Wat .net packages are required to run a function in azure, access keyvault and connect to cosmos db
+7. What .net using statements are required for an http post, access keyvault and connect to cosmos db
+8. How do I create an azure http request .net function in visual studio code
+9. What dotnet commands are required to create an azure http function
+
+
 ## Section 4: Creating an Azure Function with GitHub CoPilot and VS Code
 
 Learn how to create an Azure Function using GitHub Copilot and Visual Studio Code with the following steps:
