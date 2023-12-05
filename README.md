@@ -61,7 +61,7 @@ Learn how to create an Azure Function using GitHub Copilot and Visual Studio Cod
 
 1. Install the required Azure extensions in VS Code. **Ask CoPilot how**
 2. Open a new file or project for your Azure Function.
-3. Optionally: use VS Code **terminal** & creating the function with **dotnet func** commands; Or, using the VS Code Azure Function **create** dialog: 
+3. Optionally: use VS Code **Terminal** & create the function with **dotnet func** commands; Or, using the VS Code Azure Function **create** dialog: 
    
 ```bash
 #
@@ -72,7 +72,7 @@ $PS1 cd MyHttpFunction
 $PS1> func new --name MyHttpTrigger --template "HTTP trigger" --authlevel "anonymous"
 ```
 
-4.  Optionally, use the VS Code **builtin** Azure Function create dialog: 
+4.  Recommended: use the VS Code **builtin** Azure Function create dialog
 
 ![VS Code Azure Function create dialog](https://github.com/garyciampa/GitHubCoPilotVSCodePrimer/assets/56933939/80078f7d-2399-4524-b252-9c6b0fe56ad1)
 
