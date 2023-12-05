@@ -94,13 +94,13 @@ Copilot seamlessly integrates with Azure services. Follow these suggested prompt
 
 **Ulitmately, the developer is pilot-in-command, PIC**, therefore applying logic and thought to the desired outcome is **REQUIRED** before accepting code suggestions
 
-## Section 5a: Lets prompt copilot to verify a few **POST** query and request header properties 
+## Section 5a: Lets prompt copilot to verify **POST** query & request header properties 
 
 1. Open the **MyHttpFunction** project in VS Code, and start with a clean pallete, in other words, let's delete the function except for initial method header and using statements. Optionally, run the empty function and test locally to verify a starting point. **Ask Copilot** 
    
 ![MyHttpFunction CleanPallette](https://github.com/garyciampa/GitHubCoPilotVSCodePrimer/assets/56933939/2c5b74fe-48ec-457d-8399-e7b20ca4d5a5)
 
-3. Let's start off by verifying a few parameters and properties in the **POST** and run a local test (sample code snipped below)
+3. Let's start off by verifying parameters & properties in the **POST** and run a local test
 
 **NOTE, CAUTION**: As CoPilot is a context sensitive service, review, accept, copy or tab through suggestion code recommendations and accept as desired
 
@@ -111,12 +111,14 @@ Copilot seamlessly integrates with Azure services. Follow these suggested prompt
 Moving back after the **verification of B2BCustomerId** stanza, let's add some checks on other data. **tab** or **accept** as CoPilot prompts 
 
 ``` // read request header and verify the B2BCustomerIdKey is not null, if null return unquthorized``` 
+
 ``` // deserialize the request body to a dynamic object```
+
 ``` // verify the data object includes an OrderId, OrderDateTime, CustomerId, and OrderId and if not return BadRequestBody```
 
 At this point, you should be getting the flow and interaction with CoPilot: 
 
-` adding a comment
+- adding a comment, view recommendations 
 - inspecting the recommendations
 - accepting or trying again
 - we'll see what the code looks like momentarily for this first section. 
@@ -124,7 +126,9 @@ At this point, you should be getting the flow and interaction with CoPilot:
 We need to generate a unique id for later, therefore, let's use CoPilot to generate and log what we have so far
 
 ``` // create a uuid and add to data.id```
+
 ``` // send requestBody the log in the format of RequestBody: {requestBody}```
+
 ``` // send data object ot the log in the format of Data: {data}```
 
 ### Let's save our work so far, and, try to run the program with VS Code. See the snip below, the final code is available "here"
@@ -132,7 +136,6 @@ We need to generate a unique id for later, therefore, let's use CoPilot to gener
 - Use CoPilot to assist!
 - If extensions are missing use the CoPilot Chat dialog to help resolve any missing extensions, or references
 - Install extensions, or add missing **using** statements, stop and restart VS Code
-
   
 ![Step5a SampleCodeSnip](https://github.com/garyciampa/GitHubCoPilotVSCodePrimer/assets/56933939/0cbff455-c064-4f80-9c8b-8f431f583619)
 
