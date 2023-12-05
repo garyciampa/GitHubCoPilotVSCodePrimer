@@ -34,14 +34,30 @@ To start using GitHub Copilot in Visual Studio Code, follow these steps:
 8. How do I create an azure http request .net function in visual studio code
 9. What dotnet commands are required to create an azure http function
 
+![GitHub Copilot Chat sample prompt dialog](https://github.com/garyciampa/GitHubCoPilotVSCodePrimer/assets/56933939/74eef4e8-e718-44de-b6e3-613194e7d362)
 
 ## Section 4: Creating an Azure Function with GitHub CoPilot and VS Code
 
 Learn how to create an Azure Function using GitHub Copilot and Visual Studio Code with the following steps:
 
-1. Install the required Azure extensions in VS Code.
+1. Install the required Azure extensions in VS Code. **Ask CoPilot how**
 2. Open a new file or project for your Azure Function.
-3. Utilize Copilot to speed up your function's code implementation.
+3. Optionally: use VS Code **terminal** & creating the function with **dotnet func** commands; Or, using the VS Code Azure Function **create** dialog: 
+   
+```bash
+#
+# Sample func init command in VS Code Terminal to create
+# a new Azure function in CWD, using Azure Function Core V4 
+$PS1> func init MyHttpFunction --dotnet  --AzureFunctionsVersion v4
+$PS1 cd MyHttpFunction 
+$PS1> func new --name MyHttpTrigger --template "HTTP trigger" --authlevel "anonymous"
+```
+
+4.  Optionally, use the VS Code *builtin* Azure Function create feature
+
+![VS Code Azure Function create dialog](https://github.com/garyciampa/GitHubCoPilotVSCodePrimer/assets/56933939/7e2a02c4-c1fe-408c-a43f-464c83bea73c)
+ 
+5. Utilize Copilot to speed up your function's code implementation.
 
 ## Section 5: GitHub Copilot Prompts for VS Code to connect to Azure Key Vault and Azure Cosmos DB
 
