@@ -76,13 +76,13 @@ $PS1> func new --name MyHttpTrigger --template "HTTP trigger" --authlevel "anony
 
 ![VS Code Azure Function create dialog](https://github.com/garyciampa/GitHubCoPilotVSCodePrimer/assets/56933939/80078f7d-2399-4524-b252-9c6b0fe56ad1)
 
-5. Create the desired function using VS Code terminal with **func init** command style
+5. Optionally, create the desired function using VS Code terminal with **func init** command style
 
 ![VSCode CreateFunction FunctionInit](https://github.com/garyciampa/GitHubCoPilotVSCodePrimer/assets/56933939/ecc26dd1-ca3b-4abb-b616-2a682de8a343)
 
 8. Now, let's get started using Copilot to speed up your discovery!
 
-## Section 5: GitHub Copilot Prompts for VS Code to connect to Azure Key Vault and Azure Cosmos DB
+## Section 5: GitHub Copilot Prompts for VS Code to connect to Azure Key Vault & Azure Cosmos DB
 
 Copilot seamlessly integrates with Azure services. Follow these suggested prompt and flow to build something **fun**. 
 
@@ -100,7 +100,7 @@ Copilot seamlessly integrates with Azure services. Follow these suggested prompt
    
 ![MyHttpFunction CleanPallette](https://github.com/garyciampa/GitHubCoPilotVSCodePrimer/assets/56933939/2c5b74fe-48ec-457d-8399-e7b20ca4d5a5)
 
-3. Let's start off by verifying parameters & properties in the **POST** and run a local test
+3. Let's start off by verifying parameters & properties in the **POST**, thence, run a local test
 
 **NOTE, CAUTION**: As CoPilot is a context sensitive service, review, accept, copy or tab through suggestion code recommendations and accept as desired
 
@@ -108,7 +108,7 @@ Copilot seamlessly integrates with Azure services. Follow these suggested prompt
 
 ``` // insert a 200 response and include the B2BCustomerId in the response body ```
 
-Moving back after the **verification of B2BCustomerId** stanza, let's add some checks on other data. **tab** or **accept** as CoPilot prompts 
+Moving back after the **verification of B2BCustomerId** stanza, let's add some checks for other data. **tab** or **accept** as CoPilot prompts 
 
 ``` // read request header and verify the B2BCustomerIdKey is not null, if null return unquthorized``` 
 
@@ -131,7 +131,7 @@ We need to generate a unique id for later, therefore, let's use CoPilot to gener
 
 ``` // send data object ot the log in the format of Data: {data}```
 
-### Let's save our work so far, and, try to run the program with VS Code. See the snip below, the final code is available "here"
+### Let's save our work, and, try to run the program with VS Code. See the snip below, the final code is available "here"
 
 - Use CoPilot to assist!
 - If extensions are missing use the CoPilot Chat dialog to help resolve any missing extensions, or references
