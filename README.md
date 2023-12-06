@@ -25,7 +25,17 @@ To start using GitHub Copilot in Visual Studio Code, follow these steps:
 2. Sign in to your GitHub account within VS Code.
 3. Open a code file, and start coding! Copilot will provide suggestions as you type.
 
-### Using the GitHub Copilot "Chat" prompt dialog, here are a few suggested dialog prompts to launch your discovery: 
+### Interacting with GitHub CoPilot is available via three options: 
+
+- Option 1: GitHub CoPilot Chat extension, avaialabe on the VS Code **activity bar**
+- Option 2: Right-click within a file, or code, select the menu **CoPilot->Start inline chat** item, or, **Ctrl+I**
+- Option 3: Start writing a comment **// how do I create a comment in dotnet**, **enter** or **tab** to see or accept recommendations. 
+
+| CoPilot Chat Extension | CoPilot Inline Chat | CoPilot Comment Style |
+| :-: | :-: | :-: |
+| ![GHCoPilotVSCodeExtensionChat](https://github.com/garyciampa/GitHubCoPilotVSCodePrimer/assets/56933939/2949217b-8beb-41f7-aea6-ce12d0f6fc2a) | ![GHCoPilotVSCodeInlineChat](https://github.com/garyciampa/GitHubCoPilotVSCodePrimer/assets/56933939/ac5341b6-1153-4249-9a91-0ae8ddc56242) | **Start typing a comment in code, tab or enter** |
+
+### Using the GitHub Copilot "Chat" prompt extension, here are a few suggested dialog prompts to launch your discovery: 
 
 ```
 What azure service is recommended to create a REST endpoint for connecting to Cosmos Db
@@ -61,7 +71,11 @@ Learn how to create an Azure Function using GitHub Copilot and Visual Studio Cod
 
 1. Install the required Azure extensions in VS Code. **Ask CoPilot how**
 2. Open a new file or project for your Azure Function.
-3. Optionally: use VS Code **Terminal** & create the function with **dotnet func** commands; Or, using the VS Code Azure Function **create** dialog: 
+3. Recommended: use the VS Code **builtin** Azure Function create dialog
+
+![VS Code Azure Function create dialog](https://github.com/garyciampa/GitHubCoPilotVSCodePrimer/assets/56933939/80078f7d-2399-4524-b252-9c6b0fe56ad1)
+
+4. Optionally: use VS Code **Terminal** & create the function with **dotnet func** commands
    
 ```bash
 #
@@ -72,15 +86,9 @@ $PS1 cd MyHttpFunction
 $PS1> func new --name MyHttpTrigger --template "HTTP trigger" --authlevel "anonymous"
 ```
 
-4.  Recommended: use the VS Code **builtin** Azure Function create dialog
-
-![VS Code Azure Function create dialog](https://github.com/garyciampa/GitHubCoPilotVSCodePrimer/assets/56933939/80078f7d-2399-4524-b252-9c6b0fe56ad1)
-
-5. Optionally, create the desired function using VS Code terminal with **func init** command style
-
 ![VSCode CreateFunction FunctionInit](https://github.com/garyciampa/GitHubCoPilotVSCodePrimer/assets/56933939/ecc26dd1-ca3b-4abb-b616-2a682de8a343)
 
-8. Now, let's get started using Copilot to speed up your discovery!
+Now, let's get started using Copilot to speed up your discovery!
 
 ## Section 5: GitHub Copilot Prompts for VS Code to connect to Azure Key Vault & Azure Cosmos DB
 
@@ -94,15 +102,13 @@ Copilot seamlessly integrates with Azure services. Follow these suggested prompt
 
 **Ulitmately, the developer is pilot-in-command, PIC**, therefore applying logic and thought to the desired outcome is **REQUIRED** before accepting code suggestions
 
-## Section 5a: Lets prompt copilot to verify **POST** query & request header properties 
+## Section 5a: Start prompting copilot to verify **POST** query & request header properties 
 
-1. Open the **MyHttpFunction** project in VS Code, and start with a clean pallete, in other words, let's delete the function except for initial method header and using statements. Optionally, run the empty function and test locally to verify a starting point. **Ask Copilot** 
+1. Open the **MyHttpFunction** project in VS Code, and start with a clean pallete, in other words: **DELETE** the generated function code **EXCEPT** initial method header and using statements. Optionally, run the empty function and test locally to verify a starting point. **Ask Copilot** 
    
 ![MyHttpFunction CleanPallette](https://github.com/garyciampa/GitHubCoPilotVSCodePrimer/assets/56933939/2c5b74fe-48ec-457d-8399-e7b20ca4d5a5)
 
 3. Let's start off by verifying parameters & properties in the **POST**, thence, run a local test
-
-**NOTE, CAUTION**: As CoPilot is a context sensitive service, review, accept, copy or tab through suggestion code recommendations and accept as desired
 
 ``` // verify that the B2BCustomerId is not null and return a 400 if it is null ``` 
 
