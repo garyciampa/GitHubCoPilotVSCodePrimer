@@ -228,7 +228,7 @@ Sample REST POST request JSON body:
 - Ask CoPilot how to move the Azure Key Vault method to connect using the default credential to a static function. This will improve initialization and performance.
 - Ask Copilot how to create a method and move the AzureKeyVaultConnect and AzureCosmosDbConnect sections into seperate files.
 ## Section 8: 
-- Sample ![MyHttpTrigger.cs compelte sample](https://github.com/garyciampa/GitHubCoPilotVSCodePrimer/blob/main/src/MyHttpTrigger.cs)
+- Sample ![MyHttpTrigger.cs complete sample](https://github.com/garyciampa/GitHubCoPilotVSCodePrimer/blob/main/src/MyHttpTrigger.cs)
 - Sample ![MyHttpFunction Git Repo](https://github.com/garyciampa/MyHttpFunction)
 
 ## Section 8: 
