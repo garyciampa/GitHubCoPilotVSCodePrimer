@@ -227,7 +227,8 @@ Sample REST POST request JSON body:
 - Ask CoPilot to find out how to move the string variables in the program to an **appsettings.json** file. This will result in better style and formatting
 - Ask CoPilot how to move the Azure Key Vault method to connect using the default credential to a static function. This will improve initialization and performance.
 - Ask Copilot how to create a method and move the AzureKeyVaultConnect and AzureCosmosDbConnect sections into seperate files.
-- Sample ![MyHttpFunction.cs](https://github.com/garyciampa/GitHubCoPilotVSCodePrimer/blob/main/sample/MyHttpTrigger.cs)
+## Section 8: 
+- Sample ![MyHttpTrigger.cs complete sample](https://github.com/garyciampa/GitHubCoPilotVSCodePrimer/blob/main/src/MyHttpTrigger.cs)
 - Sample ![MyHttpFunction Git Repo](https://github.com/garyciampa/MyHttpFunction)
 
 ## Section 8: 
