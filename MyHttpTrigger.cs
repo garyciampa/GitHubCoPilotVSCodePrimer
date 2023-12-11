@@ -11,6 +11,13 @@ using Microsoft.Azure.Cosmos;
 using Azure.Identity;
 using Azure.Security.KeyVault.Secrets;
 
+// required updates to sample code
+// 1. Update Key Vault URI to your Key Vault URI
+// 2. Update Key Vault Secret Name to your Key Vault Secret Name (which contains the CosmosDB Connection String)
+// 3. Update the CosmosDB Database Name to your CosmosDB Database Name and Container Name to your CosmosDB Container Name
+// 4. Update the CosmosDB Partition Key to your CosmosDB Partition Key (if different than OrderId)
+// 5. Optionally, create a static function to connect to Key Vault with the DefaultAzureCredential and return a 500 error if unable to connect
+
 namespace Contoso.Function  
 {
     public static class MyHttpTrigger
@@ -55,7 +62,7 @@ namespace Contoso.Function
             log.LogInformation($"Data: {data}");
 
 		// create a connection to Azure Key Vault with DefaultAzureCredential and return 500 error and message if unable to connect
-            var kvUri = "https://kv-ade-useast2-001.vault.azure.net/";
+            var kvUri = "https://<AzureKeyVault>.vault.azure.net/";
             var client = new SecretClient(new Uri(kvUri), new DefaultAzureCredential());
             if (client == null)
             {
@@ -104,7 +111,9 @@ namespace Contoso.Function
             try
             {
             await container.CreateItemAsync(data);
-                return new OkObjectResult("Data sent to Cosmos DB successfully, item id: " + data.id + "");
+            string responseMessage = $"B2BCustomerId: {B2BCustomerId}, OrderId: {data.OrderId}, DataId: {data.id}";
+            return new OkObjectResult(responseMessage);
+
             }   
         // if unable to send "data" object to CosmosDB Container return server error 500 unable to send data to CosmosDB
             catch (Exception ex)
@@ -112,12 +121,6 @@ namespace Contoso.Function
             log.LogError($"Error sending data to Cosmos DB: {ex.Message}");
             return new StatusCodeResult(StatusCodes.Status500InternalServerError);
             }
-
-
-            // insert a 200 return statement and return the B2BCustomerId. the OrderId and DataId  
-            string responseMessage = $"B2BCustomerId: {B2BCustomerId}, OrderId: {data.OrderId}, DataId: {data.id}";
-            return new OkObjectResult(responseMessage);
-
         }
     }
 }
