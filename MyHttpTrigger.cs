@@ -11,11 +11,11 @@ using Microsoft.Azure.Cosmos;
 using Azure.Identity;
 using Azure.Security.KeyVault.Secrets;
 
-namespace MyHttpFunction
+namespace Contoso.Function  
 {
     public static class MyHttpTrigger
     {
-        [FunctionName("MyHttpTrigger")]
+        [FunctionName("HttpTrigger1")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
@@ -52,60 +52,65 @@ namespace MyHttpFunction
             // send requestBody the log in the format of RequestBody: {requestBody}
             log.LogInformation($"RequestBody: {requestBody}");
             // send data object ot the log in the format of Data: {data}
-            log.LogInformation($"Data: {data}");  
+            log.LogInformation($"Data: {data}");
 
-        // create a connection to Azure Key Vault with DefaultAzureCredential and return server error 500 if unable to connect
-            var client = new SecretClient(new Uri("https://mykeyvault.vault.azure.net/"), new DefaultAzureCredential());    
+		// create a connection to Azure Key Vault with DefaultAzureCredential and return 500 error and message if unable to connect
+            var kvUri = "https://kv-ade-useast2-001.vault.azure.net/";
+            var client = new SecretClient(new Uri(kvUri), new DefaultAzureCredential());
             if (client == null)
             {
-                return new StatusCodeResult(500);
+                return new ObjectResult("Unable to connect to Azure Key Vault") { StatusCode = 500 };
             }
-
+        
         // verify a secretValue with getsecretasync and return server error 500 if unable to get secret
-            KeyVaultSecret secret = await client.GetSecretAsync("MySecret");
+            KeyVaultSecret secret = await client.GetSecretAsync("CosmosDbDemoOrderItems");
             if (secret == null)
             {
-                return new StatusCodeResult(500);
+                return new ObjectResult("Unable to get secret") { StatusCode = 500 };
             }
 
         // assign the secretValue to a variable
             string secretValue = secret.Value;
 
-        // send secretValue to the log in the format of SecretValue: {secretValue}, truncate the secretValue to 5 characters
+        // send the secretValue to the log in the format of SecretValue: {secretValue} and truncate the secretValue to 5 characters
             log.LogInformation($"SecretValue: {secretValue.Substring(0, 5)}");
-        // send secretValue to the log in the format of SecretValue: {secretValue}, mask after the string "AccountKey=" 
+
+        // send the secretValue to the log in the format of SecretValue: {secretValue}, and mask after the string "AccountKey=" 
             log.LogInformation($"SecretValue: {secretValue.Substring(0, secretValue.IndexOf("AccountKey=") + 11)}**********");
-        
-        // Create CosmosDB client connection using the secretValue as the connection
+
+        // create CosmosDb Client connection with the secretValue as the connection string
             CosmosClient cosmosClient = new CosmosClient(secretValue);
+        // if unable to connect to CosmosDb return a 500 error and message
             if (cosmosClient == null)
             {
-                return new StatusCodeResult(500);
+                return new ObjectResult("Unable to connect to CosmosDb") { StatusCode = 500 };
             }
 
-        // Connect to Cosmos DB and create a database if unable to connect return server error 500 
-            Database database = await cosmosClient.CreateDatabaseIfNotExistsAsync("MyDatabase");
+        // Connect to Cosmos DB using cosmosClient and return server error 500 unable to connect to CosmosDB
+            Database database = await cosmosClient.CreateDatabaseIfNotExistsAsync("DemoOrderItemsDb");
             if (database == null)
             {
-                return new StatusCodeResult(500);
+                return new ObjectResult("Unable to connect to CosmosDb") { StatusCode = 500 };
             }
 
-            // Connect to Cosmos DB container and if unable to connect return server error 500
-            Container container = await database.CreateContainerIfNotExistsAsync("MyContainer", "/id");
+        // Connect to Cosmos DB container and if unable to connect return server error 500 unable to connect to CosmosDB using data.OrderId as the partition key
+            Container container = await database.CreateContainerIfNotExistsAsync("DemoOrderItems", "/OrderId");
             if (container == null)
             {
-                return new StatusCodeResult(500);
+                return new ObjectResult("Unable to connect to CosmosDb Container") { StatusCode = 500 };
             }
-        
 
-            // try to send data object to DemoOrderItemsContainer and if it fails sever errror 500
+        // try to send "data" object to CosmosDB Container
             try
             {
-                ItemResponse<dynamic> response = await container.CreateItemAsync(data);
-            }
-            catch (Exception)
+            await container.CreateItemAsync(data);
+                return new OkObjectResult("Data sent to Cosmos DB successfully, item id: " + data.id + "");
+            }   
+        // if unable to send "data" object to CosmosDB Container return server error 500 unable to send data to CosmosDB
+            catch (Exception ex)
             {
-                return new StatusCodeResult(500);
+            log.LogError($"Error sending data to Cosmos DB: {ex.Message}");
+            return new StatusCodeResult(StatusCodes.Status500InternalServerError);
             }
 
 
