@@ -24,7 +24,12 @@ To start using GitHub Copilot in Visual Studio Code, follow these steps:
 1. Install the GitHub Copilot extension from the VS Code marketplace.
 2. Sign in to your GitHub account within VS Code.
 3. Open a code file, and start coding! Copilot will provide suggestions as you type.
-4. Accessing Azure Key Vault and Azure Cosmos DB required to successfully run the final program. See detials for 
+4. Accessing Azure Key Vault and Azure Cosmos DB required to successfully run the final program. Refer to:
+
+- ![GitHub CoPilot presentation](https://github.com/garyciampa/GitHubCoPilotVSCodePrimer/blob/main/docs/MicrosoftDeveloperExperienceDay.GhCopilot.pdf), and, 
+- ![GitHub CoPilot sample REST Azure Function source](https://github.com/garyciampa/GitHubCoPilotVSCodePrimer/blob/main/src/MyHttpTrigger.cs)
+
+for addtional information and final code sample. 
 
 ### Interacting with GitHub CoPilot is available via three options: 
 
