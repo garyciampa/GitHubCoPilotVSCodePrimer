@@ -103,10 +103,11 @@ Copilot seamlessly integrates with Azure services. Follow these suggested prompt
 1. Open the desired file or project.
 2. Use Copilot to generate code snippets for steps 
 3. Customize the generated code based on your specific configurations.
+4. Prompts & instructions are intended as a **guide**, not a step-by-step **tutorial**. The intent is to **discover** & **explore** features and familarity with GitHub CoPilot. 
 
 **NOTE:** CoPilot interacts with the code using current context and style, therefore, consistency in prompt dialog helps CoPilot achieve the desired patterns. 
 
-**Ulitmately, the developer is pilot-in-command, PIC**, therefore applying logic and thought to the desired outcome is **REQUIRED** before accepting code suggestions
+<img src="https://github.com/images/modules/site/copilot/productivity-bg-head.png" width="100" height="100">  **Ulitmately, the developer is pilot-in-command, PIC**, therefore applying logic and thought to the desired outcome is **REQUIRED** before accepting code suggestions.
 
 ## Section 5a: Start prompting copilot to verify **POST** query & request header properties 
 
