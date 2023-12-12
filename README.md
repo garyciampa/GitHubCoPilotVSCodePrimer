@@ -216,7 +216,7 @@ Sample REST POST request syntax:
 
 Sample REST POST request header: 
 
-``` B2BCustomerId: 27330, OrderId: 123456789, DataId: 40c21ae1-9cb0-48e0-a3ce-ca7167de7dc9 ```
+``` B2BCustomerIdKey: 27330Key```
 
 
 Sample REST POST request JSON body: 
