@@ -123,7 +123,7 @@ Copilot seamlessly integrates with Azure services. Follow these suggested prompt
 
 Moving back after the **verification of B2BCustomerId** stanza, let's add some checks for other data. **tab** or **accept** as CoPilot prompts 
 
-``` // read request header and verify the B2BCustomerIdKey is not null, if null return unquthorized``` 
+``` // read request header and verify the B2BCustomerIdKey is not null, if null return unauthorized``` 
 
 ``` // deserialize the request body to a dynamic object```
 
