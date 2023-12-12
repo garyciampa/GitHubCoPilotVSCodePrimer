@@ -107,7 +107,7 @@ Copilot seamlessly integrates with Azure services. Follow suggested prompt & flo
 
 **NOTE:** CoPilot interacts with the code using current context and style, therefore, consistency in prompt dialog helps CoPilot achieve the desired patterns. 
 
-<img src="https://github.com/images/modules/site/copilot/productivity-bg-head.png" width="100" height="100">  **Ulitmately, the developer is pilot-in-command, PIC**, therefore applying logic and thought to the desired outcome is **REQUIRED** before accepting code suggestions.
+<img src="https://github.com/images/modules/site/copilot/productivity-bg-head.png" width="100" height="100">  **Ultimately, the developer is pilot-in-command, PIC**, therefore applying logic and thought to the desired outcome is **REQUIRED** before accepting code suggestions.
 
 ## Section 5a: Start prompting CoPilot to verify **POST** query & request header properties 
 
