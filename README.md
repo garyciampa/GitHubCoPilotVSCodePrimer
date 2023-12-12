@@ -21,10 +21,10 @@ Before diving into GitHub Copilot, ensure you have the following prerequisites:
 
 To start using GitHub Copilot in Visual Studio Code, follow these steps:
 
-1. Install the GitHub Copilot extension from the VS Code marketplace.
-2. Sign in to your GitHub account within VS Code.
-3. Open a code file, and start coding! Copilot will provide suggestions as you type.
-4. Accessing Azure Key Vault and Azure Cosmos DB required to successfully run the final program. Refer to:
+- Install the GitHub Copilot extension from the VS Code marketplace.
+- Sign in to your GitHub account within VS Code.
+- Open a code file, and start coding! Copilot will provide suggestions as you type.
+- Accessing Azure Key Vault and Azure Cosmos DB required to successfully run the final program. Refer to:
 
 - ![GitHub CoPilot presentation](https://github.com/garyciampa/GitHubCoPilotVSCodePrimer/blob/main/docs/MicrosoftDeveloperExperienceDay.GhCopilot.pdf), and, 
 - ![GitHub CoPilot sample REST Azure Function source](https://github.com/garyciampa/GitHubCoPilotVSCodePrimer/blob/main/src/MyHttpTrigger.cs)
@@ -43,8 +43,8 @@ for addtional information and final code sample.
 
 ### Using the GitHub Copilot "Chat" prompt extension, here are a few suggested dialog prompts to launch your discovery: 
 
-```
-What azure service is recommended to create a REST endpoint for connecting to Cosmos Db
+``` 
+What azure service is recommended to create a REST endpoint for connecting to Cosmos Db 
 ```
 
 ```
@@ -76,8 +76,8 @@ What dotnet commands are required to create an azure http function
 Learn how to create an Azure Function using GitHub Copilot and Visual Studio Code with the following steps:
 
 1. Install the required Azure extensions in VS Code. **Ask CoPilot how**
-2. Open a new file or project for your Azure Function.
-3. Recommended: use the VS Code **builtin** Azure Function create dialog
+2. Create a new file or project for your Azure Function.
+3. Recommended: use the VS Code **builtin** Azure Function create dialog.
 
 ![VS Code Azure Function create dialog](https://github.com/garyciampa/GitHubCoPilotVSCodePrimer/assets/56933939/80078f7d-2399-4524-b252-9c6b0fe56ad1)
 
@@ -98,10 +98,10 @@ Now, let's get started using Copilot to speed up your discovery!
 
 ## Section 5 Overview: GitHub Copilot Prompts to verify REST POST properties
 
-Copilot seamlessly integrates with Azure services. Follow these suggested prompt and flow to build something **fun**. 
+Copilot seamlessly integrates with Azure services. Follow suggested prompt & flow to build something **fun**. 
 
 1. Open the desired file or project.
-2. Use Copilot to generate code snippets for steps 
+2. Use Copilot to generate code snippets for steps.
 3. Customize the generated code based on your specific configurations.
 4. Prompts & instructions are intended as a **guide**, not a step-by-step **tutorial**. The intent is to **discover** & **explore** features and familarity with GitHub CoPilot. 
 
@@ -109,7 +109,7 @@ Copilot seamlessly integrates with Azure services. Follow these suggested prompt
 
 <img src="https://github.com/images/modules/site/copilot/productivity-bg-head.png" width="100" height="100">  **Ulitmately, the developer is pilot-in-command, PIC**, therefore applying logic and thought to the desired outcome is **REQUIRED** before accepting code suggestions.
 
-## Section 5a: Start prompting copilot to verify **POST** query & request header properties 
+## Section 5a: Start prompting CoPilot to verify **POST** query & request header properties 
 
 1. Open the **MyHttpFunction** project in VS Code, and start with a clean pallete, in other words: **DELETE** the generated function code **EXCEPT** initial method header and using statements. Optionally, run the empty function and test locally to verify a starting point. **Ask Copilot** 
    
@@ -212,11 +212,12 @@ By now, you should be getting the hang of interacting with CoPilot, try a few mo
 
 Sample REST POST request syntax: 
 
-``` http://localhost:7071/api/MyHttpTrigger1?B2BCustomerId=27330```
+``` http://localhost:7071/api/MyHttpTrigger1?B2BCustomerId=27330 ```
 
 Sample REST POST request header: 
 
-``` B2BCustomerIdKey: 27330Key```
+``` B2BCustomerId: 27330, OrderId: 123456789, DataId: 40c21ae1-9cb0-48e0-a3ce-ca7167de7dc9 ```
+
 
 Sample REST POST request JSON body: 
 ```
