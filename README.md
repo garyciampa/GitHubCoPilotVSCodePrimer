@@ -115,13 +115,13 @@ Copilot seamlessly integrates with Azure services. Follow suggested prompt & flo
    
 ![MyHttpFunction CleanPallette](https://github.com/garyciampa/GitHubCoPilotVSCodePrimer/assets/56933939/2c5b74fe-48ec-457d-8399-e7b20ca4d5a5)
 
-3. Start off by verifying parameters & properties in the **POST**, thence, run a local test
+2. Start off by verifying parameters & properties in the **POST**, thence, run a local test
 
 ``` // verify that the B2BCustomerId is not null and return a 400 if it is null ``` 
 
 ``` // insert a 200 response and include the B2BCustomerId in the response body ```
 
-Moving back after the **verification of B2BCustomerId** stanza, let's add some checks for other data. **tab** or **accept** as CoPilot prompts 
+3. Moving back after the **verification of B2BCustomerId** stanza, let's add some checks for other data. **tab** or **accept** as CoPilot prompts 
 
 ``` // read request header and verify the B2BCustomerIdKey is not null, if null return unauthorized``` 
 
@@ -176,7 +176,11 @@ Using **GetSecretAsync** in the comment to help Copilot come to the correct reco
 
 ### Azure Key Vault RBAC controls (local) or Azure Function integration 
 
-Enable **authentication** and **authorization** for the **Function instance** to 1: Access Azure Key Vault, and, 2: **read** a secret
+Enable **authentication** and **authorization** for the **Function instance** to 
+
+1: Access Azure Key Vault, and
+
+2: **read** a secret
 
 - **Azure Function instance** must run using a **credential** defined in Azure (Entra) Active Directory (user principal, user assigned, or system assigned identity)
 - Configure Azure Key Vault RBAC controls to allow **Key Vault Secrets User** for intended secret (**Ask CoPilot** how to do this)
