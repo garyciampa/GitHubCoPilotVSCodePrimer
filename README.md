@@ -239,10 +239,18 @@ Sample REST POST request JSON body:
 - Ask CoPilot how to move the Azure Key Vault method to connect using the default credential to a static function. This will improve initialization and performance.
 - Ask Copilot how to create a method and move the AzureKeyVaultConnect and AzureCosmosDbConnect sections into seperate files.
 ## Section 8: 
+
 - Sample ![MyHttpTrigger.cs complete sample](https://github.com/garyciampa/GitHubCoPilotVSCodePrimer/blob/main/src/MyHttpTrigger.cs)
 - Sample ![MyHttpFunction Git Repo](https://github.com/garyciampa/MyHttpFunction)
 
-## Section 8: 
+## References 
+
+* [GitHub Trust Center](https://github.com/trust-center)
+* [GitHub CoPilot Privacy FAQ](https://copilot.github.trust.page/faq)
+* [Microsoft Learning Path GitHub CoPilot Fundamentals](https://learn.microsoft.com/en-us/training/paths/copilot/)
+* [Microsoft Education Skills Initiative, GitHub CoPilot Virtual Classroom Events](https://esi.microsoft.com/Search?q=github%20copilot)
+  
+  **Requires ESI Access**
 
 GitHub Copilot revolutionizes the way we write code, making development more efficient and enjoyable. Experiment with Copilot in various scenarios, explore its capabilities, and enhance your coding productivity.
 
