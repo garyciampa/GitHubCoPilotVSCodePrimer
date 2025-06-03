@@ -257,3 +257,32 @@ GitHub Copilot revolutionizes the way we write code, making development more eff
 Feel free to share your experiences, report issues, or contribute to the GitHub Copilot community.
 
 Happy coding!
+
+## Section 9: Using GitHub Copilot Agent Mode
+
+GitHub Copilot Agent Mode introduces advanced AI-powered capabilities that go beyond code completion and chat. With Agent Mode, Copilot can:
+
+- **Act as an autonomous coding agent:** Perform multi-step tasks, such as refactoring code, generating tests, or updating dependencies, based on your instructions.
+- **Understand project context:** Analyze your entire workspace to make informed decisions and provide more relevant suggestions.
+- **Automate repetitive workflows:** Execute sequences of actions, such as running builds, fixing errors, or updating documentation, with a single prompt.
+- **Integrate with external tools:** Interact with terminals, version control, and cloud services to streamline your development process.
+
+### How to Enable and Use Copilot Agent Mode in VS Code
+
+1. **Install the latest GitHub Copilot and Copilot Chat extensions** from the VS Code Marketplace.
+2. **Open the Command Palette** (`Ctrl+Shift+P` or `Cmd+Shift+P` on Mac) and search for `Copilot: Enable Agent Mode`.
+3. **Activate Agent Mode** by selecting the command. You may see a notification confirming that Agent Mode is enabled.
+4. **Start a new Copilot Chat session** or use inline chat. You can now issue high-level instructions, such as:
+   - `Refactor all async methods to use cancellation tokens.`
+   - `Generate unit tests for all public methods in MyHttpTrigger.cs.`
+   - `Update dependencies to the latest stable versions.`
+   - `Scan the workspace for TODO comments and summarize them.`
+5. **Review and approve actions:** Copilot Agent Mode will propose a plan and may ask for confirmation before making changes. Review the plan and approve or modify as needed.
+6. **Monitor progress:** Agent Mode will provide updates as it completes each step, and you can interact with it to adjust the workflow or provide additional context.
+
+### Tips for Effective Use
+- Be as specific as possible in your instructions to get the best results.
+- Use Agent Mode for complex or repetitive tasks that span multiple files or require workspace-wide context.
+- Always review changes before accepting them, especially for critical code or configuration updates.
+
+For more information, visit the [GitHub Copilot documentation](https://docs.github.com/en/copilot) and explore the latest features of Agent Mode.
