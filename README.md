@@ -4,10 +4,6 @@ GitHub Copilot is an innovative coding assistant pow**NOTE:** CoPilot interacts 
 
 <img src="https://docs.github.com/assets/images/search/copilot-action.png" width="432" height="250">  
 
-**Ultimately, the developer is pilot-in-command, PIC**, therefore applying logic and thought to the desired outcome is **REQUIRED** before accepting code suggestions.
-
-## Section 5a: Start prompting CoPilot to verify **POST** query & request header propertiesby machine learning that helps you write code faster and with less effort. This README provides an overview of GitHub Copilot's features and guides you through the process of getting started with it using Visual Studio Code.
-
 ## Section 1: Introduction & Features for GitHub CoPilot
 
 GitHub Copilot is designed to enhance your coding experience with the following key features:
