@@ -276,6 +276,82 @@ GitHub Copilot Agent Mode introduces advanced AI-powered capabilities that go be
 
 For more information, visit the [GitHub Copilot documentation](https://docs.github.com/en/copilot) and explore the latest features of Agent Mode.
 
+## Section 10: Using GitHub Copilot with Azure Fabric Services
+
+Azure Fabric Services provide a comprehensive platform for data engineering, data science, and analytics. GitHub Copilot can significantly accelerate your development workflow when working with Fabric services. Here are some practical examples:
+
+### Working with Fabric Notebooks and Data Engineering
+
+GitHub Copilot excels at helping you write data processing code in Fabric notebooks:
+
+**Example Prompts for Data Engineering:**
+```
+// Create a PySpark DataFrame to read from Azure Data Lake Storage Gen2
+// Transform data by filtering rows where sales amount is greater than 1000
+// Write the transformed data to a Delta table in Fabric lakehouse
+```
+
+**Example Prompts for Data Science:**
+```
+// Load data from Fabric lakehouse and prepare it for machine learning
+// Create a classification model using scikit-learn for customer churn prediction
+// Evaluate model performance and create visualizations using matplotlib
+```
+
+### Fabric Pipeline Development
+
+When building data pipelines in Fabric, Copilot can help generate pipeline activities and configurations:
+
+**Example Prompts:**
+```
+// Create a Copy Data activity to move data from SQL Server to Fabric lakehouse
+// Add a data transformation using Data Flow Gen2 with column mapping
+// Schedule the pipeline to run daily at 2 AM UTC
+```
+
+### Power BI Integration with Fabric
+
+Copilot can assist with DAX formulas and Power BI integrations:
+
+**Example Prompts:**
+```
+// Create a DAX measure to calculate year-over-year sales growth
+// Generate a DAX formula for moving average over the last 12 months
+// Create a calculated column for customer segmentation based on purchase history
+```
+
+### Fabric Real-time Analytics (KQL)
+
+For real-time analytics scenarios, Copilot can help with KQL (Kusto Query Language):
+
+**Example Prompts:**
+```
+// Write a KQL query to find top 10 customers by transaction volume in the last hour
+// Create a time series analysis query to detect anomalies in website traffic
+// Generate a KQL query to join multiple tables and aggregate results by time windows
+```
+
+### Best Practices for Using Copilot with Fabric
+
+1. **Be Specific with Context:** Include details about your data schema, Fabric workspace, and business requirements
+2. **Iterative Development:** Use Copilot suggestions as starting points and refine based on your specific needs
+3. **Security Considerations:** Always review generated code for security best practices, especially when handling sensitive data
+4. **Performance Optimization:** Ask Copilot for performance optimization suggestions for large-scale data processing
+5. **Documentation:** Use Copilot to generate documentation and comments for your Fabric solutions
+
+### Sample Fabric Development Workflow with Copilot
+
+```
+1. "Create a Fabric notebook to analyze customer purchase patterns"
+2. "Generate PySpark code to read data from multiple Delta tables"
+3. "Create data quality checks and validation rules"
+4. "Build machine learning features for customer segmentation"
+5. "Generate Power BI DAX measures for executive dashboard"
+6. "Create automated tests for data pipeline validation"
+```
+
+These examples demonstrate how GitHub Copilot can accelerate your Azure Fabric development by providing contextual code suggestions, best practices, and helping you navigate the complexity of modern data platform development.
+
 ## References 
 
 * [GitHub Trust Center](https://github.com/trust-center)
