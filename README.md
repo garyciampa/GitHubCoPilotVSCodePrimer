@@ -1,6 +1,12 @@
 # GitHub Copilot - Your AI-Powered Coding Assistant
 
-GitHub Copilot is an innovative coding assistant powered by machine learning that helps you write code faster and with less effort. This README provides an overview of GitHub Copilot's features and guides you through the process of getting started with it using Visual Studio Code.
+GitHub Copilot is an innovative coding assistant pow**NOTE:** CoPilot interacts with the code using current context and style, therefore, consistency in prompt dialog helps CoPilot achieve the desired patterns. 
+
+<img src="https://docs.github.com/assets/images/search/copilot-action.png" width="432" height="250">  
+
+**Ultimately, the developer is pilot-in-command, PIC**, therefore applying logic and thought to the desired outcome is **REQUIRED** before accepting code suggestions.
+
+## Section 5a: Start prompting CoPilot to verify **POST** query & request header propertiesby machine learning that helps you write code faster and with less effort. This README provides an overview of GitHub Copilot's features and guides you through the process of getting started with it using Visual Studio Code.
 
 ## Section 1: Introduction & Features for GitHub CoPilot
 
@@ -107,7 +113,9 @@ Copilot seamlessly integrates with Azure services. Follow suggested prompt & flo
 
 **NOTE:** CoPilot interacts with the code using current context and style, therefore, consistency in prompt dialog helps CoPilot achieve the desired patterns. 
 
-<img src="https://github.com/images/modules/site/copilot/productivity-bg-head.png" width="100" height="100">  **Ultimately, the developer is pilot-in-command, PIC**, therefore applying logic and thought to the desired outcome is **REQUIRED** before accepting code suggestions.
+<img src="https://docs.github.com/assets/images/search/copilot-action.png" width="432" height="250"> 
+
+**Ultimately, the developer is pilot-in-command, PIC**, therefore applying logic and thought to the desired outcome is **REQUIRED** before accepting code suggestions.
 
 ## Section 5a: Start prompting CoPilot to verify **POST** query & request header properties 
 
@@ -243,21 +251,6 @@ Sample REST POST request JSON body:
 - Sample ![MyHttpTrigger.cs complete sample](https://github.com/garyciampa/GitHubCoPilotVSCodePrimer/blob/main/src/MyHttpTrigger.cs)
 - Sample ![MyHttpFunction Git Repo](https://github.com/garyciampa/MyHttpFunction)
 
-## References 
-
-* [GitHub Trust Center](https://github.com/trust-center)
-* [GitHub CoPilot Privacy FAQ](https://copilot.github.trust.page/faq)
-* [Microsoft Learning Path GitHub CoPilot Fundamentals](https://learn.microsoft.com/en-us/training/paths/copilot/)
-* [Microsoft Education Skills Initiative, GitHub CoPilot Virtual Classroom Events](https://esi.microsoft.com/Search?q=github%20copilot)
-  
-  **Requires ESI Access**
-
-GitHub Copilot revolutionizes the way we write code, making development more efficient and enjoyable. Experiment with Copilot in various scenarios, explore its capabilities, and enhance your coding productivity.
-
-Feel free to share your experiences, report issues, or contribute to the GitHub Copilot community.
-
-Happy coding!
-
 ## Section 9: Using GitHub Copilot Agent Mode
 
 GitHub Copilot Agent Mode introduces advanced AI-powered capabilities that go beyond code completion and chat. With Agent Mode, Copilot can:
@@ -286,3 +279,18 @@ GitHub Copilot Agent Mode introduces advanced AI-powered capabilities that go be
 - Always review changes before accepting them, especially for critical code or configuration updates.
 
 For more information, visit the [GitHub Copilot documentation](https://docs.github.com/en/copilot) and explore the latest features of Agent Mode.
+
+## References 
+
+* [GitHub Trust Center](https://github.com/trust-center)
+* [GitHub CoPilot Privacy FAQ](https://copilot.github.trust.page/faq)
+* [Microsoft Learning Path GitHub CoPilot Fundamentals](https://learn.microsoft.com/en-us/training/paths/copilot/)
+* [Microsoft Education Skills Initiative, GitHub CoPilot Virtual Classroom Events](https://esi.microsoft.com/Search?q=github%20copilot)
+  
+  **Requires ESI Access**
+
+GitHub Copilot revolutionizes the way we write code, making development more efficient and enjoyable. Experiment with Copilot in various scenarios, explore its capabilities, and enhance your coding productivity.
+
+Feel free to share your experiences, report issues, or contribute to the GitHub Copilot community.
+
+Happy coding!
