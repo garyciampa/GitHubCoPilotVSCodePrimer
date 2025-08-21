@@ -1,6 +1,6 @@
 # GitHub Copilot - Your AI-Powered Coding Assistant
 
-GitHub Copilot is an innovative coding assistant pow**NOTE:** CoPilot interacts with the code using current context and style, therefore, consistency in prompt dialog helps CoPilot achieve the desired patterns. 
+GitHub Copilot is an innovative coding assistant powwered by LLM and agentic modes. CoPilot interacts with the code using current context and style, therefore, consistency in prompt dialog helps CoPilot achieve the desired patterns. 
 
 <img src="https://docs.github.com/assets/images/search/copilot-action.png" width="432" height="250">  
 
